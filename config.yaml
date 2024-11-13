@@ -1,0 +1,29 @@
+# config.yaml
+bigquery:
+  project_id: "bigquery-public-data"  # This is Google's public dataset project
+  dataset_id: "samples"
+  table_name: "shakespeare"  # Using the Shakespeare public dataset as an example
+  credentials_path: "path/to/your/credentials.json"  # Replace with your credentials path
+
+openai:
+  api_key: "your-openai-api-key"  # Replace with your OpenAI API key
+  model: "gpt-4"
+  temperature: 0.1
+  max_tokens: 500
+
+# Metadata for the shakespeare table
+table_metadata:
+  description: "This table contains Shakespeare's works with word counts and relevant metadata"
+  schema:
+    - name: "word"
+      type: "STRING"
+      description: "The word from the text"
+    - name: "word_count"
+      type: "INTEGER"
+      description: "Number of times this word appears"
+    - name: "corpus"
+      type: "STRING"
+      description: "The work in which the word appears"
+    - name: "corpus_date"
+      type: "INTEGER"
+      description: "The date of the work"
